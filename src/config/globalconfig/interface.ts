@@ -1,17 +1,19 @@
 import { ReactNode } from "react";
 
-interface GlobalConfigProps {
+interface initContext {
   children?: ReactNode;
   /**
    * @description 主题颜色
    * @default #1890FF
    */
   globalColor: string;
+  show: boolean;
+  showColorPicker: ()=>void;
   setGlobalColor: (color:string) => void;
 }
 
 interface GlobalProps {
-  value: GlobalConfigProps
+  value: initContext
   children:ReactNode
 }
-export type { GlobalConfigProps,GlobalProps };
+export type { initContext,GlobalProps };

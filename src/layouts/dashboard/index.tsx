@@ -10,7 +10,7 @@ const { Content } = Layout;
 const DashBoard: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
   return (
-    <Layout style={{height:'100%'}}>
+    <Layout style={{ height: "100%" }}>
       <Slide collapsed={collapsed}></Slide>
       <Layout>
         <Head collapsed={collapsed} setCollapsed={setCollapsed}></Head>

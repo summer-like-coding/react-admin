@@ -2,7 +2,7 @@
   "sliderMenu": [
     {
       "id": 1,
-      "title": "dashboard",
+      "title": "首页",
       "children": [
         {
           "id": 11,

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const Slide = styled.div`
   height: 100%;
-  background: #001529;
+  background: #ffffff;
 `;
 
 const Logo = styled.div`
@@ -10,4 +10,4 @@ const Logo = styled.div`
   background: rgba(255, 255, 255, 0.3);
 `;
 
-export { Slide,Logo };
+export { Slide, Logo };

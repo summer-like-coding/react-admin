@@ -4,7 +4,8 @@ import "antd/dist/reset.css";
 import DashBoard from "./layouts/dashboard";
 import { GlobalStyle } from "./GlobalStyle";
 import GlobalConfig from "./config/globalconfig";
-import { GlobalConfigProps } from "./config/globalconfig/interface";
+import { initContext } from "./config/globalconfig/interface";
+import { ConfigProvider } from "antd";
 
 const router = createBrowserRouter([
   {
@@ -13,23 +14,35 @@ const router = createBrowserRouter([
   },
 ]);
 
-
-
 const App: React.FC = () => {
   // 设置默认颜色
   const [color, setColor] = useState<string>("#ad5c22");
-  function changeColor(color:string) {
+  const [showPicker, setShowPicker] = useState<boolean>(false);
+  function changeColor(color: string) {
     setColor(color);
   }
-  const contextValue: GlobalConfigProps = {
+  function changeShow() {
+    setShowPicker(!showPicker);
+  }
+  const contextValue: initContext = {
     globalColor: color,
+    show: showPicker,
+    showColorPicker: changeShow,
     setGlobalColor: changeColor,
   };
   return (
-    <GlobalConfig value={contextValue}>
-      <GlobalStyle />
-      <RouterProvider router={router}></RouterProvider>
-    </GlobalConfig>
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: color,
+        },
+      }}
+    >
+      <GlobalConfig value={contextValue}>
+        <GlobalStyle />
+        <RouterProvider router={router}></RouterProvider>
+      </GlobalConfig>
+    </ConfigProvider>
   );
 };
 export default App;

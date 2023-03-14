@@ -19,12 +19,12 @@ const slide: React.FC<Iprops> = (props) => {
   // const [openKeys, setOpenKeys] = useState(['1']);
   // 数据处理
   function changeItem(arr: IData[]): MenuItem[] {
-    return arr.map(item => {
+    return arr.map((item) => {
       return {
-        key: item.id+'',
+        key: item.id + "",
         children: item.children ? changeItem(item.children) : undefined,
         label: item.title,
-      }
+      };
     });
   }
   // 获取slider数据
@@ -34,31 +34,15 @@ const slide: React.FC<Iprops> = (props) => {
     setMenuList(changeItem(data));
   };
 
-  // const getKeys = () => {
-  //   return menuList.map((item)=>item?.key)
-  // }
   useEffect(() => {
     getSliderList();
   }, []);
 
-  // const onOpenChange: MenuProps['onOpenChange'] = (keys) => {
-  //   const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
-  //   if (arrKey.indexOf(latestOpenKey!) === -1) {
-  //     setOpenKeys(keys);
-  //   } else {
-  //     setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
-  //   }
-  // };
   return (
     <Slide>
       <Sider trigger={null} collapsible collapsed={props.collapsed}>
         <Logo></Logo>
-        <Menu
-          theme="dark"
-          mode="inline"
-          items={menuList}
-          // onOpenChange={onOpenChange}//展开或者关闭的回调
-        />
+        <Menu mode="inline" items={menuList} />
       </Sider>
     </Slide>
   );

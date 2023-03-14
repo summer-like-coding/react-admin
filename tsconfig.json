@@ -21,7 +21,8 @@
       "@/api*": ["./src/api*"],
       "@/config*": ["./src/config*"],
       // "@/modules*": ["./src/modules*"]
-    }
+    },
+    "noImplicitThis": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
