@@ -18,7 +18,8 @@
     "paths": {
       "@/layouts*": ["./src/layouts*"],
       "@/components*": ["./src/components*"],
-      // "@/stores*": ["./src/stores*"],
+      "@/api*": ["./src/api*"],
+      "@/config*": ["./src/config*"],
       // "@/modules*": ["./src/modules*"]
     }
   },

@@ -2,6 +2,7 @@ import React from "react";
 import { Layout } from "antd";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import BreadCrumb from "../breadcrumb";
+import CustormColor from "../customColors";
 const { Header } = Layout;
 
 interface Iprops {
@@ -19,6 +20,7 @@ const Head: React.FC<Iprops> = (props) => {
         }
       )}
       <BreadCrumb></BreadCrumb>
+      <CustormColor></CustormColor>
     </Header>
   );
 };
