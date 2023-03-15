@@ -1,141 +1,141 @@
 {
   "sliderMenu": [
     {
-      "id": 1,
+      "id": "dashboard",
       "title": "首页",
       "children": [
         {
-          "id": 11,
+          "id": "control",
           "title": "主控台"
         },
         {
-          "id": 12,
+          "id": "workspace",
           "title": "工作台"
         }
       ]
     },
     {
-      "id": 2,
+      "id": "basiclist",
       "title": "基础列表"
     },
     {
-      "id": 3,
+      "id": "errorPage",
       "title": "异常页面",
       "children": [
         {
-          "id": 31,
+          "id": "403",
           "title": "403"
         },
         {
-          "id": 32,
+          "id": "404",
           "title": "404"
         },
         {
-          "id": 33,
+          "id": "405",
           "title": "405"
         }
       ]
     },
     {
-      "id": 4,
+      "id": "formpage",
       "title": "表单页面",
       "children": [
         {
-          "id": 41,
+          "id": "basicform",
           "title": "基础表单"
         },
         {
-          "id": 42,
+          "id": "stepform",
           "title": "分布表单"
         },
         {
-          "id": 43,
+          "id": "formdetail",
           "title": "表单详情"
         }
       ]
     },
     {
-      "id": 5,
+      "id": "resultpage",
       "title": "结果页面",
       "children": [
         {
-          "id": 51,
+          "id": "success",
           "title": "成功页"
         },
         {
-          "id": 52,
+          "id": "error",
           "title": "失败页"
         },
         {
-          "id": 53,
+          "id": "detail",
           "title": "信息页"
         }
       ]
     },
     {
-      "id": 6,
+      "id": "settings",
       "title": "设置页面",
       "children": [
         {
-          "id": 61,
+          "id": "personsettings",
           "title": "个人设置"
         },
         {
-          "id": 62,
+          "id": "systemsettings",
           "title": "系统设置"
         }
       ]
     },
     {
-      "id": 7,
+      "id": "components",
       "title": "组件示例",
       "children": [
         {
-          "id": 71,
+          "id": "table",
           "title": "表格",
           "children": [
             {
-              "id": 711,
+              "id": "basictable",
               "title": "基础表格"
             },
             {
-              "id": 712,
+              "id": "edittable",
               "title": "单元格编辑"
             },
             {
-              "id": 713,
+              "id": "editrow",
               "title": "整行编辑"
             }
           ]
         },
         {
-          "id": 72,
+          "id": "form",
           "title": "表单",
           "children": [
             {
-              "id": 721,
+              "id": "basicuse",
               "title": "基础使用"
             },
             {
-              "id": 722,
+              "id": "usefrom",
               "title": "useForm"
             }
           ]
         },
         {
-          "id": 73,
+          "id": "updateimg",
           "title": "上传图片"
         },
         {
-          "id": 74,
+          "id": "model",
           "title": "弹窗拓展"
         },
         {
-          "id": 75,
+          "id": "markdown",
           "title": "富文本"
         },
         {
-          "id": 76,
+          "id": "drag",
           "title": "拖拽"
         }
       ]

@@ -2,6 +2,7 @@ import styled from "styled-components";
 const Slide = styled.div`
   height: 100%;
   background: #ffffff;
+  overflow:auto
 `;
 
 const Logo = styled.div`
