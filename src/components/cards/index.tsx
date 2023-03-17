@@ -1,7 +1,7 @@
 import { globalContext } from "@/config/globalconfig";
 import { Card, Tag } from "antd";
 import React, { useContext } from "react";
-import Cardcomponents from "./content";
+import { Cardcomponents } from "./content";
 
 interface Iprops {
   title?: string;
@@ -15,7 +15,7 @@ const Cards: React.FC<Iprops> = (props) => {
   return (
     <Card
       title={title}
-      style={{ width:300}}
+      style={{ flex: '1 1 auto' }}
       extra={
         <Tag
           color={globalColor}

@@ -1,8 +1,8 @@
 import { Tabs, TabsProps } from "antd";
 import React from "react";
-import BarChart from "../chart/barChart";
-import LineChart from "../chart/lineChart";
-import ChartTab from "./chartabs";
+import BarChart from "./chart/barChart";
+import LineChart from "./chart/lineChart";
+import ChartTab from "./chartab";
 const ChartTabs: React.FC = () => {
     const items: TabsProps['items'] = [
         {

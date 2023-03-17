@@ -4,6 +4,7 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import BreadCrumb from "../breadcrumb";
 import CustormColor from "../customColors";
 import { Theme } from "./head";
+import Language from "../language";
 const { Header } = Layout;
 
 interface Iprops {
@@ -22,7 +23,10 @@ const Head: React.FC<Iprops> = (props) => {
       )}
       <BreadCrumb></BreadCrumb>
       <Theme>
+        {/* 进行国际化 */}
+        <Language></Language>
         <CustormColor></CustormColor>
+
       </Theme>
     </Header>
   );

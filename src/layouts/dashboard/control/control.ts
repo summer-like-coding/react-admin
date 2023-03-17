@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const Controls = styled.div`
     display:flex;
-    width:100%;
     flex-wrap: wrap;
-    margin-left:20px
+    margin:0;
+    padding-inline: 50px;
 `
 
 const Charts = styled.div`

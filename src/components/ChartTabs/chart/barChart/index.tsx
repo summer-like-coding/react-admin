@@ -46,7 +46,10 @@ const BarChart: React.FC = () => {
       ],
     };
     chart.setOption(options);
+    window.onresize = function () {
+      chart.resize()
+    }
   }, [globalColor]);
-  return <div ref={chartRef} style={{ width: "100%", height: "400px" }}></div>;
+  return <div ref={chartRef} style={{ height: "400px" }}></div>;
 };
 export default BarChart;

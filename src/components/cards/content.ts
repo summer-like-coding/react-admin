@@ -22,4 +22,12 @@ const Cardcomponents = styled.div`
   }
 `;
 
-export default Cardcomponents;
+
+const CardContainers = styled.div`
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+  align-items: flex-start;
+  width:100%  
+`;
+export { Cardcomponents,CardContainers };
