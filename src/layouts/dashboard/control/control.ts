@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 const Controls = styled.div`
     display:flex;
-    flex-direction:row;
+    width:100%;
     flex-wrap: wrap;
-    margin-left:25px
-    
+    margin-left:20px
 `
-export default Controls
+
+const Charts = styled.div`
+    width:100%;
+`
+export { Controls,Charts }

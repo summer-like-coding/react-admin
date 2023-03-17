@@ -1,6 +1,7 @@
 import { globalContext } from "@/config/globalconfig";
-import { Button, Card, Tag } from "antd";
+import { Card, Tag } from "antd";
 import React, { useContext } from "react";
+import Cardcomponents from "./content";
 
 interface Iprops {
   title?: string;
@@ -14,12 +15,32 @@ const Cards: React.FC<Iprops> = (props) => {
   return (
     <Card
       title={title}
-      extra={<Tag color={globalColor} style={{ width: '2rem', height: '2rem',textAlign:'center',lineHeight:'2rem' }}> {extra}</Tag>}
-      style={{ width: 300,margin:'25px' }}
+      style={{ width:300}}
+      extra={
+        <Tag
+          color={globalColor}
+          style={{
+            width: "2rem",
+            height: "2rem",
+            textAlign: "center",
+            lineHeight: "2rem",
+          }}
+        >
+          {extra}
+        </Tag>
+      }
     >
-      <p>Card content</p>
-      <p>Card content</p>
-      <p>Card content</p>
+      <Cardcomponents>
+        <div className="data">31262</div>
+        <div className="rate">
+          <div className="left">日同比22%</div>
+          <div className="right">日同比22%</div>
+        </div>
+        <div className="footer">
+          <div className="lef">总访问量:</div>
+          <div className="right">886436</div>
+        </div>
+      </Cardcomponents>
     </Card>
   );
 };

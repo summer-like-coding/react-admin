@@ -14,7 +14,7 @@ const DashBoard: React.FC = () => {
       <Slide collapsed={collapsed}></Slide>
       <Layout>
         <Head collapsed={collapsed} setCollapsed={setCollapsed}></Head>
-        <Content>
+        <Content style={{"overflowX":'hidden',"overflowY":'auto',width:'100%'}}>
           <Outlet></Outlet>
         </Content>
       </Layout>
