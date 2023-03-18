@@ -4,6 +4,7 @@ const Controls = styled.div`
     display:flex;
     flex-wrap: wrap;
     margin:0;
+    padding-top:15px;
     padding-inline: 50px;
 `
 

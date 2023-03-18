@@ -15,7 +15,7 @@ const Cards: React.FC<Iprops> = (props) => {
   return (
     <Card
       title={title}
-      style={{ flex: '1 1 auto' }}
+      style={{ flex: '1 1 auto' ,"marginBottom":'10px',"marginRight":'10px'}}
       extra={
         <Tag
           color={globalColor}
