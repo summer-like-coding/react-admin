@@ -6,11 +6,10 @@ import GlobalConfig from "./config/globalconfig";
 import { initContext } from "./config/globalconfig/interface";
 import { ConfigProvider } from "antd";
 import { router } from "./router";
-
-
-
+// 引入国际化配置文件
+import '@/config/i18n/config'
 const App: React.FC = () => {
-  const route = createBrowserRouter(router)
+  const route = createBrowserRouter(router);
   // 设置默认颜色
   const [color, setColor] = useState<string>("#ad5c22");
   const [showPicker, setShowPicker] = useState<boolean>(false);

@@ -20,7 +20,6 @@
       "@/components*": ["./src/components*"],
       "@/api*": ["./src/api*"],
       "@/config*": ["./src/config*"],
-      // "@/modules*": ["./src/modules*"]
     },
     "noImplicitThis": true
   },

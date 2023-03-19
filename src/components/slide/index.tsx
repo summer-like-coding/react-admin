@@ -15,6 +15,8 @@ import { getSliderLists } from "../../api/reqHome";
 import { IData } from "../../api";
 import { MenuInfo } from "rc-menu/lib/interface";
 import { useNavigate } from "react-router-dom";
+// 引入国际化
+import { useTranslation } from "react-i18next";
 
 const { Sider } = Layout;
 
@@ -25,10 +27,13 @@ interface Iprops {
 type MenuItem = Required<MenuProps>["items"][number];
 
 const slide: React.FC<Iprops> = (props) => {
+  // 国际化
+  const { t ,i18n} = useTranslation();
   // 路由跳转
   const navigate = useNavigate();
   // 列表数据
   const [menuList, setMenuList] = useState([] as MenuItem[]);
+  // iconList
   const [iconList, setIconList] = useState([
     <HomeOutlined />,
     <UnorderedListOutlined />,
@@ -46,7 +51,7 @@ const slide: React.FC<Iprops> = (props) => {
       return {
         key: item.id,
         children: item.children ? changeItem(item.children) : undefined,
-        label: item.title,
+        label: t(item.title),
       };
     });
   }
@@ -55,6 +60,7 @@ const slide: React.FC<Iprops> = (props) => {
     return arr.map((item, index) => {
       return {
         ...item,
+        label:item.label,
         icon: iconList[index],
       };
     });
@@ -63,6 +69,7 @@ const slide: React.FC<Iprops> = (props) => {
   const getSliderList = async () => {
     let data: IData[] = await getSliderLists();
     // 对数据进行处理
+    console.log(addIconItem(changeItem(data)));
     
     setMenuList(addIconItem(changeItem(data)));
   };
@@ -71,9 +78,10 @@ const slide: React.FC<Iprops> = (props) => {
     let path = keyPath.reverse().join("/");
     navigate(path);
   };
+
   useEffect(() => {
     getSliderList();
-  }, []);
+  }, [i18n.language]);
 
   return (
     <Slide>
