@@ -20,6 +20,14 @@ const Cardcomponents = styled.div`
     flex-direction:row;
     justify-content:space-between;
   }
+  .Micon{
+    display:block;
+    margin:0 auto;
+    font-size:32px
+  }
+  .Mname{
+    text-align: center;
+  }
 `;
 
 

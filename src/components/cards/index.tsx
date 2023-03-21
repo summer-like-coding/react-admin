@@ -1,13 +1,15 @@
 import { globalContext } from "@/config/globalconfig";
 import { Card, Tag } from "antd";
+import { UserAddOutlined } from "@ant-design/icons";
 import React, { useContext } from "react";
 import { Cardcomponents } from "./content";
 
 interface Iprops {
   title?: string;
   extra?: string;
+  Mname?: string;
 }
-const Cards: React.FC<Iprops> = (props) => {
+const Lcards: React.FC<Iprops> = (props) => {
   const { title, extra } = props;
   const {
     value: { globalColor },
@@ -15,7 +17,7 @@ const Cards: React.FC<Iprops> = (props) => {
   return (
     <Card
       title={title}
-      style={{ flex: '1 1 auto' ,"marginBottom":'10px',"marginRight":'10px'}}
+      style={{ flex: "1 1 auto", marginBottom: "10px", marginRight: "10px" }}
       extra={
         <Tag
           color={globalColor}
@@ -44,4 +46,18 @@ const Cards: React.FC<Iprops> = (props) => {
     </Card>
   );
 };
-export default Cards;
+
+const Scards: React.FC<Iprops> = (props) => {
+  const {Mname} = props
+  return (
+    <Card
+      style={{ flex: "1 1 auto", marginBottom: "10px", marginRight: "10px" }}
+    >
+      <Cardcomponents>
+        <UserAddOutlined className="Micon" />
+        <div className="Mname">{ Mname }</div>
+      </Cardcomponents>
+    </Card>
+  );
+};
+export { Lcards, Scards };

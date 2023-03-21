@@ -27,3 +27,6 @@ Day05
 Day06
 1. 国际化slider部分实现
 2. 到时候路由那边可以参考：https://github.com/javaLuo/react-admin
+
+Day07
+1. echsart封装实现(不知道为啥有时会需要刷新)
