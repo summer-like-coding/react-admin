@@ -69,7 +69,7 @@ const slide: React.FC<Iprops> = (props) => {
   const getSliderList = async () => {
     let data: IData[] = await getSliderLists();
     // 对数据进行处理
-    console.log(addIconItem(changeItem(data)));
+    // console.log(addIconItem(changeItem(data)));
     
     setMenuList(addIconItem(changeItem(data)));
   };

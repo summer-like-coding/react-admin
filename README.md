@@ -23,3 +23,7 @@ Day04
 Day05
 1. slide加上图标
 2. 使用react-i18next实现国际化
+
+Day06
+1. 国际化slider部分实现
+2. 到时候路由那边可以参考：https://github.com/javaLuo/react-admin

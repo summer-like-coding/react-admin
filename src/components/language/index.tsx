@@ -23,7 +23,7 @@ const Language: React.FC = () => {
     <Dropdown menu={{ items, onClick }}>
       <Button onClick={(e) => e.preventDefault()}>
         <Space>
-          {i18n.language == 'en' ? '英文' : '中文'}
+          {i18n.language == 'en' ? 'english' : '中文'}
         </Space>
       </Button>
     </Dropdown>
