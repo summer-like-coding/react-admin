@@ -2,8 +2,9 @@ import axios, { AxiosInstance } from "axios";
 
 import { message } from "antd";
 
+export const commonURl = "http://localhost:5000"
+export const weatherURL = "https://restapi.amap.com/v3/weather/weatherInfo"
 export let axiosInstance: AxiosInstance = axios.create({
-  baseURL: "http://localhost:5000",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/x-www-form-urlencoded",

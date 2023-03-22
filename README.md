@@ -30,3 +30,6 @@ Day06
 
 Day07
 1. echsart封装实现(不知道为啥有时会需要刷新)
+
+Day08
+1. 希望使用天气API，发现需要将key和安全密钥一起使用，json-server没法使用

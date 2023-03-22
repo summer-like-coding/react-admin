@@ -7,4 +7,9 @@ body,html,#root{
     height: 100%;
     overflow: hidden;
 }
+img,video{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 `;

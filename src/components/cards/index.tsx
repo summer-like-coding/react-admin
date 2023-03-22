@@ -48,16 +48,35 @@ const Lcards: React.FC<Iprops> = (props) => {
 };
 
 const Scards: React.FC<Iprops> = (props) => {
-  const {Mname} = props
+  const { Mname } = props;
   return (
     <Card
       style={{ flex: "1 1 auto", marginBottom: "10px", marginRight: "10px" }}
     >
       <Cardcomponents>
         <UserAddOutlined className="Micon" />
-        <div className="Mname">{ Mname }</div>
+        <div className="Mname">{Mname}</div>
       </Cardcomponents>
     </Card>
   );
 };
-export { Lcards, Scards };
+
+const SampleCards: React.FC<Iprops> = (props) => {
+  const {title} = props
+  const gridStyle: React.CSSProperties = {
+    width: "33%",
+    textAlign: "center",
+  };
+  return (
+    <Card title={title} style={{"width":'100%',"height":"350px"}}>
+      <Card.Grid style={gridStyle}>Content</Card.Grid>
+      <Card.Grid style={gridStyle}>Content</Card.Grid>
+      <Card.Grid style={gridStyle}>Content</Card.Grid>
+      <Card.Grid style={gridStyle}>Content</Card.Grid>
+      <Card.Grid style={gridStyle}>Content</Card.Grid>
+      <Card.Grid style={gridStyle}>Content</Card.Grid>
+      <Card.Grid style={gridStyle}>Content</Card.Grid>
+    </Card>
+  );
+};
+export { Lcards, Scards, SampleCards };
