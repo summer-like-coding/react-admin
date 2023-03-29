@@ -16,7 +16,7 @@ const resources = {
 i18n.use(initReactI18next).init({
     resources,
     // 默认语言  zh/en  中文/英文
-    lng: 'en',
+    lng: 'zh',
     interpolation: {
         escapeValue: false,
     },

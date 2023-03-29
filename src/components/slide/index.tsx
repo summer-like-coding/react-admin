@@ -28,13 +28,17 @@ type MenuItem = Required<MenuProps>["items"][number];
 
 const slide: React.FC<Iprops> = (props) => {
   // 国际化
-  const { t ,i18n} = useTranslation();
+  // 确定区间
+  const { t, i18n } = useTranslation("translation", {
+    keyPrefix: "slides",
+  });
+
   // 路由跳转
   const navigate = useNavigate();
   // 列表数据
   const [menuList, setMenuList] = useState([] as MenuItem[]);
   // iconList
-  const [iconList, setIconList] = useState([
+  const iconList = [
     <HomeOutlined />,
     <UnorderedListOutlined />,
     <ExclamationCircleOutlined />,
@@ -42,7 +46,7 @@ const slide: React.FC<Iprops> = (props) => {
     <CheckCircleOutlined />,
     <SettingOutlined />,
     <WalletOutlined />,
-  ]);
+  ];
   // 展开key
   // const [openKeys, setOpenKeys] = useState(['1']);
   // 数据处理
@@ -60,7 +64,7 @@ const slide: React.FC<Iprops> = (props) => {
     return arr.map((item, index) => {
       return {
         ...item,
-        label:item.label,
+        label: item.label,
         icon: iconList[index],
       };
     });
@@ -70,7 +74,7 @@ const slide: React.FC<Iprops> = (props) => {
     let data: IData[] = await getSliderLists();
     // 对数据进行处理
     // console.log(addIconItem(changeItem(data)));
-    
+
     setMenuList(addIconItem(changeItem(data)));
   };
   // 处理点击事件

@@ -33,3 +33,6 @@ Day07
 
 Day08
 1. 希望使用天气API，发现需要将key和安全密钥一起使用，json-server没法使用
+
+Day09
+1. i18next 使用keyPrefix，确定当前区间的感觉
