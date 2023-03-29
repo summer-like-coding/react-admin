@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Cardcomponents = styled.div`
-  width: 100%;
   min-width:200px;
   margin:0;
   padding:0;
+  margin-bottom:1rem;
   .data {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -20,21 +20,13 @@ const Cardcomponents = styled.div`
     flex-direction:row;
     justify-content:space-between;
   }
-  .Micon{
-    display:block;
-    margin:0 auto;
-    font-size:32px
-  }
-  .Mname{
-    text-align: center;
-  }
 `;
 
 
 const CardContainers = styled.div`
   display: flex;
   flex-wrap:wrap;
-  justify-content:space-evenly;
+  justify-content:flex-start;
   align-items: flex-start;
   width:100%  
 `;

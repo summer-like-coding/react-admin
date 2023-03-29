@@ -49,11 +49,15 @@ const Container = styled.div`
 
 const ContainerItem = styled.div`
   grid-column: span 1 / span 1;
+  @media screen and (min-width: 700px) and (max-width: 1440px) {
+    grid-column: span 2 / span 2;
+  }
 `;
 const ImgContainer = styled.div`
-  margin-top:1rem;
+  margin-top: 1rem;
   padding: 0 12px 16px 12px;
-  background-color:#fff;
+  background-color: #fff;
   width: 100%;
-`
-export { Todo, Tips, Messages, Container, ContainerItem,ImgContainer };
+  border-radius: 8px 8px 0 0;
+`;
+export { Todo, Tips, Messages, Container, ContainerItem, ImgContainer };

@@ -14,10 +14,9 @@ const LargetList: React.FC = () => {
   return (
     <List
       size="large"
-      header={<div>动态</div>}
-      bordered
+      header={<div style={{"padding":"0px 24px","minHeight":"36px","fontWeight":'600',"fontSize":"16px","lineHeight":"30px"}}>动态</div>}
       dataSource={data}
-      style={{ marginTop: "20px", backgroundColor: "#fff" }}
+      style={{ marginTop: "20px", backgroundColor: "#fff",borderRadius:"8px 8px 0 0" }}
       renderItem={(item) => (
         <List.Item>
           <Trend></Trend>

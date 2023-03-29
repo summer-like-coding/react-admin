@@ -2,8 +2,42 @@ import { Lcards, Scards } from "@/components/cards";
 import { CardContainers } from "@/components/cards/content";
 import ChartTabs from "@/components/chartTabs";
 import { Layouts } from "@/layouts/layout";
+import {
+  ControlOutlined,
+  BarChartOutlined,
+  ShoppingCartOutlined,
+  PayCircleOutlined,
+  MessageOutlined,
+  TagsOutlined,
+  SettingOutlined,
+  CreditCardOutlined,
+} from "@ant-design/icons";
 import React from "react";
 const Control: React.FC = () => {
+  let iconList = [
+    <ControlOutlined />,
+    <BarChartOutlined />,
+    <ShoppingCartOutlined />,
+    <PayCircleOutlined />,
+    <CreditCardOutlined />,
+    <MessageOutlined />,
+    <TagsOutlined />,
+    <SettingOutlined />,
+  ];
+  let nameList = [
+    "用户",
+    "分析",
+    "商品",
+    "订单",
+    "票据",
+    "消息",
+    "标签",
+    "配置",
+  ];
+  let optionsList = {
+    iconList: iconList,
+    Mname: nameList,
+  };
   return (
     <Layouts>
       <CardContainers>
@@ -12,16 +46,7 @@ const Control: React.FC = () => {
         <Lcards title={"订单量"} extra={"周"}></Lcards>
         <Lcards title={"成交额"} extra={"月"}></Lcards>
       </CardContainers>
-      <CardContainers>
-        <Scards Mname={"用户"}></Scards>
-        <Scards Mname={"分析"}></Scards>
-        <Scards Mname={"商品"}></Scards>
-        <Scards Mname={"订单"}></Scards>
-        <Scards Mname={"票据"}></Scards>
-        <Scards Mname={"消息"}></Scards>
-        <Scards Mname={"标签"}></Scards>
-        <Scards Mname={"配置"}></Scards>
-      </CardContainers>
+      <Scards options={optionsList}></Scards>
       <ChartTabs></ChartTabs>
     </Layouts>
   );

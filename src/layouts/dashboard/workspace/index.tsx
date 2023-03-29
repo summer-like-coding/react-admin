@@ -1,13 +1,39 @@
 import { Layouts } from "@/layouts/layout";
 import React from "react";
-import { Container, ContainerItem, ImgContainer, Messages, Tips, Todo } from "./workspace";
-
-import { SampleCards, Scards } from "@/components/cards";
+import {
+  Container,
+  ContainerItem,
+  ImgContainer,
+  Messages,
+  Tips,
+  Todo,
+} from "./workspace";
+import {
+  ControlOutlined,
+  UnorderedListOutlined,
+  SettingOutlined,
+  ApartmentOutlined,
+  FormOutlined,
+} from "@ant-design/icons";
+import { Scards } from "@/components/cards";
 import Trend from "@/components/trends";
 import { LargetList } from "@/components/list";
-import img from '@/assets/Business.svg'
-import { CardContainers } from "@/components/cards/content";
+import img from "@/assets/Business.svg";
 const Workspace: React.FC = () => {
+  let iconList = [
+    <ControlOutlined />,
+    <UnorderedListOutlined />,
+    <FormOutlined />,
+    <ApartmentOutlined />,
+    <SettingOutlined />,
+  ];
+  let nameList = ["主控台", "列表", "表单", "权限管理", "系统管理"];
+
+  let optionsList = {
+    iconList: iconList,
+    Mname: nameList,
+  };
+
   return (
     <Layouts>
       <Todo>
@@ -32,23 +58,13 @@ const Workspace: React.FC = () => {
       </Todo>
       <Container>
         <ContainerItem>
-          <SampleCards title="项目"></SampleCards>
+          <Scards title="项目" options={optionsList}></Scards>
           <LargetList></LargetList>
         </ContainerItem>
         <ContainerItem>
-          {/* <CardContainers>
-            <Scards Mname={"用户"}></Scards>
-            <Scards Mname={"分析"}></Scards>
-            <Scards Mname={"商品"}></Scards>
-            <Scards Mname={"订单"}></Scards>
-            <Scards Mname={"票据"}></Scards>
-            <Scards Mname={"消息"}></Scards>
-            <Scards Mname={"标签"}></Scards>
-            <Scards Mname={"配置"}></Scards>
-          </CardContainers> */}
-          <SampleCards title="快捷操作"></SampleCards>
+          <Scards title="快捷操作" options={optionsList}></Scards>
           <ImgContainer>
-           <img src={img} alt="" />
+            <img src={img} alt="" />
           </ImgContainer>
         </ContainerItem>
       </Container>

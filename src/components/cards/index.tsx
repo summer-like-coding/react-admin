@@ -1,14 +1,19 @@
 import { globalContext } from "@/config/globalconfig";
 import { Card, Tag } from "antd";
-import { UserAddOutlined } from "@ant-design/icons";
 import React, { useContext } from "react";
-import { Cardcomponents } from "./content";
+import { Cardcomponents, CardContainers } from "./content";
+
+export interface Ioptions {
+  Mname?: string[];
+  iconList?: JSX.Element[];
+}
 
 interface Iprops {
   title?: string;
   extra?: string;
-  Mname?: string;
+  options?: Ioptions;
 }
+
 const Lcards: React.FC<Iprops> = (props) => {
   const { title, extra } = props;
   const {
@@ -48,35 +53,31 @@ const Lcards: React.FC<Iprops> = (props) => {
 };
 
 const Scards: React.FC<Iprops> = (props) => {
-  const { Mname } = props;
+  const { title, options } = props;
+  const { iconList, Mname } = options!;
+
+  const iconStyle: React.CSSProperties = {
+    fontSize: "32px",
+    textAlign: "center",
+  };
+  const nameStyle: React.CSSProperties = {
+    textAlign: "center",
+  };
   return (
     <Card
       style={{ flex: "1 1 auto", marginBottom: "10px", marginRight: "10px" }}
+      title={title}
     >
-      <Cardcomponents>
-        <UserAddOutlined className="Micon" />
-        <div className="Mname">{Mname}</div>
-      </Cardcomponents>
+      {iconList?.map((item, index) => {
+        return (
+            <Card.Grid key={index}>
+              <div style={iconStyle}>{item}</div>
+              <div style={nameStyle}>{Mname![index]}</div>
+            </Card.Grid>
+        );
+      })}
     </Card>
   );
 };
 
-const SampleCards: React.FC<Iprops> = (props) => {
-  const {title} = props
-  const gridStyle: React.CSSProperties = {
-    width: "33%",
-    textAlign: "center",
-  };
-  return (
-    <Card title={title} style={{"width":'100%',"height":"350px"}}>
-      <Card.Grid style={gridStyle}>Content</Card.Grid>
-      <Card.Grid style={gridStyle}>Content</Card.Grid>
-      <Card.Grid style={gridStyle}>Content</Card.Grid>
-      <Card.Grid style={gridStyle}>Content</Card.Grid>
-      <Card.Grid style={gridStyle}>Content</Card.Grid>
-      <Card.Grid style={gridStyle}>Content</Card.Grid>
-      <Card.Grid style={gridStyle}>Content</Card.Grid>
-    </Card>
-  );
-};
-export { Lcards, Scards, SampleCards };
+export { Lcards, Scards };
