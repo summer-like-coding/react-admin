@@ -1,6 +1,9 @@
 import DashBoard from "@/layouts/dashboard";
 import Control from "@/layouts/dashboard/control";
 import Workspace from "@/layouts/dashboard/workspace";
+import Forbidden from "@/layouts/errorPages/403";
+import NotFound from "@/layouts/errorPages/404";
+import ServerError from "@/layouts/errorPages/500";
 import Basiclist from "@/layouts/list/basiclist";
 import { RouteObject } from "react-router-dom";
 
@@ -31,12 +34,15 @@ export const router: RouteObject[] = [
         children: [
           {
             path: "403",
+            element:<Forbidden></Forbidden>
           },
           {
             path: "404",
+            element:<NotFound></NotFound>
           },
           {
-            path: "405",
+            path: "500",
+            element:<ServerError></ServerError>
           },
         ],
       },
